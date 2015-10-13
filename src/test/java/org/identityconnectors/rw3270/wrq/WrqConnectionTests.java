@@ -19,9 +19,11 @@
  * enclosed by brackets [] replaced by your own identifying information: 
  * "Portions Copyrighted [year] [name of copyright owner]"
  * ====================
+ * Portions Copyrighted 2015 ForgeRock AS
  */
 package org.identityconnectors.rw3270.wrq;
 
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.AssertJUnit;
@@ -77,6 +79,9 @@ public class WrqConnectionTests {
     public static void before() {
         PropertyBag testProps = TestHelpers.getProperties(WrqConnection.class);
         HOST_NAME         = testProps.getStringProperty("HOST_NAME");
+        if ("__configureme__".equals(HOST_NAME)) {
+            throw new SkipException("REST Sample tests are skipped. Create private configuration!");
+        }
         SYSTEM_PASSWORD   = testProps.getStringProperty("SYSTEM_PASSWORD");
         SYSTEM_USER       = testProps.getStringProperty("SYSTEM_USER");
         System.out.println("HOST_NAME="+HOST_NAME);
