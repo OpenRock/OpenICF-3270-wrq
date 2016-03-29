@@ -27,7 +27,7 @@
     <parent>
         <groupId>org.forgerock.openicf.framework</groupId>
         <artifactId>framework</artifactId>
-        <version>1.5.0.0-SNAPSHOT</version>
+        <version>1.5.0.0</version>
     </parent>
     <groupId>org.forgerock.openicf.misc</groupId>
     <artifactId>3270wrq</artifactId>
@@ -36,6 +36,11 @@
     <name>IBM 3270 Terminal WRQ</name>
     <description>IBM 3270 Terminal WRQ Library</description>
     <url>http://openicf.forgerock.org/connectors/3270wrq</url>
+    <scm>
+       <connection>scm:git:ssh://git@stash.forgerock.org:7999/openicf/3270-wrq.git</connection>
+       <developerConnection>scm:git:ssh://git@stash.forgerock.org:7999/openicf/3270-wrq.git</developerConnection>
+       <url>http://stash.forgerock.org/projects/OPENICF/repos/3270-wrq/browse</url>
+    </scm>
     <properties>
         <source.version>1.7</source.version>
         <target.version>1.7</target.version>
@@ -78,7 +83,7 @@
         <dependency>
             <groupId>org.forgerock.openicf.misc</groupId>
             <artifactId>3270common</artifactId>
-            <version>1.1.0.0-SNAPSHOT</version>
+            <version>1.1.0.0</version>
         </dependency>
         <dependency>
             <groupId>com.github.cverges</groupId>
@@ -112,7 +117,7 @@
         <dependency>
             <groupId>org.forgerock.openicf.misc</groupId>
             <artifactId>patternparser</artifactId>
-            <version>1.1.0.0-SNAPSHOT</version>
+            <version>1.1.0.0</version>
             <scope>test</scope>
         </dependency>
 
